@@ -10,7 +10,7 @@ on:
       IMG_URL:
         description: 'URL to recovery/boot image'
         required: true
-        default: 'https://github.com/momo54181/action_build_twrp_device_tree/raw/main/recovery.img'
+        default: 'https://github.com/Done334/action_build_twrp_device_tree/raw/main/recovery.img'
 
 jobs:
   generate-device-tree:
@@ -66,3 +66,5 @@ jobs:
           Source image: ${{ github.event.inputs.IMG_URL }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        permissions:
+        contents: write
