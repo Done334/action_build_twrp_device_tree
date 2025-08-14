@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       LIBRARY_NAME:
-        description: 'Library name for the device tree'
+        description: 'NAME'
         required: true
-        default: 'Twrp_Device_Generator'
+        default: 'TWRP Device Tree'
       IMG_URL:
         description: 'URL'
         required: true
@@ -34,7 +34,7 @@ jobs:
         
     - name: Install TWRP generator
       run: |
-        pip3 install --upgrade twrpdtgen
+        pip3 install twrpdtgen
         
     - name: Download recovery image
       run: |
